@@ -19,7 +19,7 @@ public class Employee {
     private String position;
     @Column(name ="created_at" )
     private Date createdAt;
-    @Column(name = "employee_user_id")
+    @Column(name = "user_login_id")
     private int employeeUserId;
 
     public int getEmployeeUserId() {
