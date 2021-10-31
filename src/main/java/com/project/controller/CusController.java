@@ -42,6 +42,7 @@ public class CusController {
     public Object deleteCustomers(
             @PathVariable("id") int id
     ){
+        System.out.println("");
         return service.deleteCustomer(id);
     }
 }
