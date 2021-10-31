@@ -17,7 +17,7 @@ public interface EmRepository extends JpaRepository<Employee, Integer> {
     List<Employee> getAll();
 
     @Query(nativeQuery = true,
-            value = "select * from project.employee where employee.id = :id")
+            value = "select * from project.employee where employee.user_login_id = :id")
     List<Employee> getById(
             @Param("id") int id
     );
@@ -39,7 +39,7 @@ public interface EmRepository extends JpaRepository<Employee, Integer> {
     @Modifying
     @Transactional
     @Query(nativeQuery = true,
-    value = "delete from project.employee where employee.id = :id ")
+    value = "delete from project.employee where employee.user_login_id = :id ")
     void deleteById(int id);
 
 
