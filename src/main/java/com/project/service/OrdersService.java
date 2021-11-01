@@ -19,6 +19,9 @@ public class OrdersService {
     @Autowired
     private OrRepository orRepository;
 
+    public Object getAll(){
+        return  orRepository.getAll();
+    }
 
     public Object getById(int cusId) {
         return orRepository.getById(cusId);

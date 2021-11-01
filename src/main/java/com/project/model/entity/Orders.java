@@ -15,8 +15,18 @@ public class Orders {
     @Column(name = "sum_food")
     private int sumFood;
     private int numbers;
+    @Column(name = "total_price")
+    private int totalPrice;
     @Column (name = "created_at")
     private Date createdAt;
+
+    public int getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(int totalPrice) {
+        this.totalPrice = totalPrice;
+    }
 
     public Date getCreatedAt() {
         return createdAt;

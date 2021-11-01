@@ -10,7 +10,10 @@ public class OrdersController {
     @Autowired
     private OrdersService ordersService;
 
-
+    @GetMapping("/api/orders")
+    public Object getAll(){
+        return ordersService.getAll();
+    }
     @GetMapping("/api/orders/{cusId}")
     public Object getById(
             @PathVariable("cusId") int cusId

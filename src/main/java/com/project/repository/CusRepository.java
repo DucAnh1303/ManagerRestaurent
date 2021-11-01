@@ -14,10 +14,11 @@ import java.util.List;
 public interface CusRepository extends JpaRepository<Customers, Integer> {
     @Query(nativeQuery = true,
     value = "select *from project.customers " )
-    List<Customers> getAll();
+    List<Customers> getAll(
+    );
 
     @Query(nativeQuery = true,
-    value = "select *from project.customers where customers.id = :id")
+    value = "select *from project.customers where   customers.id = :id")
     List<Customers> getById(
             @Param("id") int id
     );
